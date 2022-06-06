@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS import -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>TITEL | CTF</title>
+</head>
+<body>
+<div class="container">
+    <nav class="nav navbar-dark justify-content-end">
+        <a class="nav-link text-dark" href="index.html">Home</a>
+        <a class="nav-link text-dark" href="installation.html">Installation</a>
+        <a class="btn btn-danger text-light" role="button" href="#">CTF</a>
+    </nav>
+
+    <p></p>
+
+    <div id="bardiv" class="progress" style="height: 5vh">
+        <div id="bar" class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+    </div>
+
+    <h1>CTF</h1>
+
+    <p></p>
+
+    <div class="toast" role="alert" aria-level="assertive" aria-atomic="true" id="answer-true">
+        <div class="toast-header">
+            <h3>%question%</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            <p>Congratz! <strong>Correct</strong> answer.</p>
+        </div>
+    </div>
+
+    <div class="toast" role="alert" aria-level="assertive" aria-atomic="true" id="answer-false">
+        <div class="toast-header">
+            <h3>%question%</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            <p>Awhh, <strong>wrong</strong> answer!</p>
+        </div>
+    </div>
+
+    <div class="accordion" id="ctf">
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="HeaderIntro">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#intro" aria-expanded="true" aria-controls="intro">Introduction</button>
+            </h2>
+            <div id="intro" class="collapse show row" aria-labelledby="HeadingIntro" data-bs-parent="ctf">
+                <div class="accordion-body col-8">
+                    <p> Once upon a time there was a little lamp. This lamp was always very smart and could remember everything himself.
+                        But due to the high energy cost, the power was cut, causing him to lose his memory.
+                        Can you help him get all his important information back?</p>
+                    
+                    <form id="introductionForm" onsubmit="return false">
+                        <div class="input-group">
+                            <input id="intro-input" class="form-control col-9" type="text" value="I understand" readonly>
+                            <button class="btn btn-outline-success col-3" type="submit" id="intro-submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="accordion-body col-4">
+                    <img src="stock.jpg" class="img-thumbnail border-2 border-dark">
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="HeadingRules">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#rules" aria-expanded="true" aria-controls="rules">Rules</button>
+            </h2>
+            <div id="rules" class="collapse row" aria-labelledby="HeadingRules" data-bs-parent="ctf">
+                <div class="accordion-body col-8">
+                    <p>Hier inleidende gedeelte van de regels</p>
+                    <ul>
+                        <li>Rule 1</li>
+                        <li>Rule 2</li>
+                        <li>Rule 3</li>
+                    </ul>
+
+                    <form id="rulesForm" onsubmit="return false">
+                        <div class="input-group">
+                            <input class="form-control col-9" type="text" value="I understand" id="rules-input" readonly>
+                            <button class="btn btn-outline-success col-3" type="submit" id="rules-submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="HeadingUser">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#User" aria-expanded="true" aria-controls="User">User</button>
+            </h2>
+            <div id="User" class="collapse row" aria-labelledby="HeadingUser" data-bs-target="ctf">
+                <div class="accordion-body col-8">
+                    <p>The lamp would like to log in to his computer, but he has forgotten his login details.
+                        He only remembers that he had written his username down somewhere. If he can find the username,
+                        he can brute-force that password and get his login details back again.</p>
+                    <p>When the little lamp is logged in, he can download important files again.</p>
+
+                    <form id="userForm" onsubmit="return false">
+                        <label><strong>Fill in the user flag</strong></label>
+                        <div class="input-group">
+                            <input class="form-control col-9" type="text" id="user-input">
+                            <button class="btn btn-outline-success col-3" type="submit" id="user-submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="HeadingRoot">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#Root" aria-expanded="true" aria-controls="Root">Root</button>
+            </h2>
+            <div id="Root" class="collapse row" aria-labelledby="HeadingRoot" data-bs-target="ctf">
+                <div class="accordion-body col-8">
+                    <p>Due to the new found files, the lamp slowly regains its memory. He remembers that he had to
+                        perform important tasks, but that he needs administrator rights for this. </p>
+                    <p>He also remembers that he needs his private keys in the serial port in order to get the admin credentials back,
+                        but he doesn't know how to do it. Can you help him out?</p>
+
+                    <form action="" id="adminForm" onsubmit="return false">
+                        <label><strong>Fill in the admin flag</strong></label>
+                        <div class="input-group">
+                            <input class="form-control col-9" type="text" id="admin-input">
+                            <button class="btn btn-outline-success col-3" type="submit" id="admin-submit">Submit</button>
+                        </div>
+                    </form>
+
+                    <form action="" id="rootForm" onsubmit="return false">
+                        <label><strong>Fill in the root flag</strong></label>
+                        <div class="input-group">
+                            <input class="form-control col-9" type="text" id="root-input">
+                            <button class="btn btn-outline-success col-3" type="submit" id="root-submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="HeadingBuffer">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#Buffer" aria-expanded="true" aria-controls="Buffer">Buffer overflow</button>
+            </h2>
+            <div id="Buffer" class="collapse row" aria-labelledby="HeadingBuffer" data-bs-target="ctf">
+                <div class="accordion-body col-8">
+                    <p>The little lamp is slowly regaining its memory, but the process isn't moving fast enough.
+                    To speed up the process, you can give a little push by performing a known type of attack that affects the memory
+                    boundaries and it has something to do with a function pointer.</p>
+
+                    <form action="" id="bufferForm" onsubmit="return false">
+                        <label><strong>Fill in the final flag</strong></label>
+                        <div class="input-group">
+                            <input class="form-control col-9" type="text" id="buffer-input">
+                            <button class="btn btn-outline-success col-3" type="submit" id="buffer-submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!--Bootstrap javascript import-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="custom.js"></script>
+</body>
+</html>

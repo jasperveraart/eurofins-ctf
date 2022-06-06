@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS import -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+    <title>TITEL | Installation</title>
+</head>
+<body>
+<div class="bg-light">
+    <nav class="nav navbar-dark justify-content-end container">
+        <a class="nav-link text-dark" href="index.html">Home</a>
+        <a class="nav-link text-muted" href="#">Installation</a>
+        <a class="btn btn-danger text-dark" role="button" href="ctf.html">CTF</a>
+    </nav>
+
+    <div id="sidebar" class="list-group col-2 bg-dark">
+        <h2 class="list-group-item sidebar-header">Table of contents</h2>
+        <a href="#preface" class="list-group-item list-group-item-action">Preface</a>
+        <a href="#StartingTheProject" class="list-group-item list-group-item-action">Starting the project</a>
+        <a href="#VisualStudioCode" class="list-group-item list-group-item-action">Visual studio code</a>
+        <a href="#PlatformioBoards" class="list-group-item list-group-item-action">Platformio Boards</a>
+        <a href="#DownloadingLiteFS" class="list-group-item list-group-item-action">Downloading LiteFS</a>
+        <a href="#ImportingTheFolder" class="list-group-item list-group-item-action">Importing the folder</a>
+        <a href="#BuildingAndUpload" class="list-group-item list-group-item-action">Building and upload</a>
+        <a href="#TheWebsite" class="list-group-item list-group-item-action">The website</a>
+        <a href="#ConnectingToWifi" class="list-group-item list-group-item-action">Connecting to wifi</a>
+        <a href="#AccessTheIP-address" class="list-group-item list-group-item-action">Access the IP-address</a>
+    </div>
+
+    <div class="row" id="main">
+
+        <div class="col-2"></div>
+
+        <div data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-offset="0" class="col-8" tabindex="0">
+            <h1>Installation Manual</h1>
+
+            <div id="preface" class="">
+                <h2>Preface</h2>
+                <p>This manual is meant for total beginners that want to experiment with the d1 mini controller.
+                    We are going over the installation in platformIO we chose this over Arduino.IDE because it is much
+                    easier to set up and use. If you don't know these programs don't worry we will guide you through this process.
+                    But before we dive into the tutorial what is an d1 mini esp8266 well it is an microcontroller you can find microcontrollers
+                    everywhere from microwaves to cars. It's basically a cheap computer with not that much processing power. The device is
+                    used frequently for home appliances or toys. What we are going to do with the device is control the LED attached to the
+                    micro controller. We are going to do this with an online website. The online website is provided with an unauthorized panel,
+                    user panel and admin panel. But this isn't a regular website it has a few vulnerbilities hidden in it. Not only the website
+                    but also the d1 mini itself has some vulnerbilities and is not out of the scope. We are going to tackle the machine but first
+                    we need to set it up. Thanks for reading and enjoy the project!  </p>
+            </div>
+
+            <hr>
+
+            <div id="StartingTheProject">
+                <h2>Starting the project</h2>
+                <p>Alright! You made it, Let's setup the device first connect your device to your computer via a micro USB cable. When you're finished you should see a blinking light now we are ready to install the driver for the device.  </p>
+                <a href="https://github.com/HobbyComponents/CH340-Drivers ">https://github.com/HobbyComponents/CH340-Drivers </a>
+                <p>If you're having trouble installing the driver check if your cable is properly inserted into the device. Changing the cable can also help. </p>
+            </div>
+
+            <hr>
+
+            <div id="VisualStudioCode">
+                <h2>Visual studio code</h2>
+                <p>Install Visual Studio Code, you most likely have it already installed on your computer. Download the extension PlatformIO. If it is your first time using Visual Studio Code you can find the extension page here.  </p>
+                <img src="images/visualstudiocode.png" class="img-fluid" alt="">
+            </div>
+
+            <hr>
+
+            <div id="PlatformioBoards">
+                <h2>Platformio Boards</h2>
+                <p>Go to Platformio by clicking the home button which is located at the bottom left. </p>
+                <img src="images/platformio_1.png" class="img-fluid" alt="">
+                <p>Navigate to boards and type in the search bar <d1 mini> the first result <Wemos D1 MINI ESP32> you should install.  </p>
+                <img src="images/platformio_2.png" class="img-fluid" alt="">
+            </div>
+
+            <hr>
+
+            <div id="DownloadingLiteFS">
+                <h2>Downloading LittleFS</h2>
+                <p>Navigate to libraries and download LittleFS_esp32.  </p>
+                <img src="images/littlefs.png" class="img-fluid" alt="">
+            </div>
+
+            <hr>
+
+            <div id="ImportingTheFolder">
+                <h2>Importing the folder</h2>
+                <p>The next thing we need to take care of is the folder you only need to import the configured <em>< HackableEspDevicePlatformio ></em> folder. <strong>This folder is as of now not yet uploaded into the repository.</strong>  You can activate the platformio.exe file with powershell and to build the program. Only if you are receiving errors. De errors from powershell are much clearer than platformio.  Don't forget to run it as administrator.</p>
+                <img src="images/importing.png" class="img-fluid" alt="">
+            </div>
+
+            <hr>
+
+            <div id="BuildingAndUpload">
+                <h2>Building and upload</h2>
+                <p>Go to platformio again. You will see a sidebar, you see the previous installed board the d1 board.  </p>
+                <p>Next we are going to build the project, upload the project build filesystem image and finally upload filesystem image.  </p>
+                <img src="images/building.png" class="img-fluid" alt="">
+            </div>
+
+            <hr>
+
+            <div id="TheWebsite">
+                <h2>The website</h2>
+                <p>Click on monitor (see previous image) and you should see an Ip-address like 198.168.4.1 in the terminal. Check your network connections and connect to the access point using your computer and make an access point (hotspot) you can connect to using your phone. Click on configure WiFi. </p>
+                <img src="images/website.png" class="img-fluid" alt="">
+            </div>
+
+            <hr>
+
+            <div id="ConnectingToWifi">
+                <h2>Connecting to wifi</h2>
+                <p>Connect to the hotspot you created with your phone. You can't connect to routers. Once you entered the password and SSID you can continue.</p>
+                <img src="images/wifi_connect.png" class="img-fluid" alt="">
+                <hr>
+                <h2>Check if it's working</h2>
+                <p>You can always check the monitor function on platformio to see what your device is doing.
+                    The output will show in the terminal.</p>
+                <img src="images/building.png" class="img-fluid" alt="">
+                <img src="images/check_working.png" class="img-fluid" alt="">
+            </div>
+
+            <hr>
+
+            <div id="AccessTheIP-address">
+                <h2> Access the IP-address</h2>
+                <p>Finally we can Access the web-page that controls the LED light. We only need to go to the URL we found in our monitoring process. In our case 192.168.146.129. You can add smart light in your /etc/hosts file. So you won't have to remember the IP-Address.  </p>
+                <img src="images/access_website.png" class="img-fluid" alt="">
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <h3 class="col-8">Hope you enjoyed this tutorial!</h3>
+                <a class="btn btn-primary col-4" href="ctf.html" role="button" >Next</a>
+            </div>
+
+            <br>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<!--Bootstrap javascript import-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script>
+    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+        target: '#sidebar'
+    })
+
+</script>
+
+</body>
+</html>
