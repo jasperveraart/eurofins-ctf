@@ -25,6 +25,10 @@ introForm.addEventListener("submit", function (event) {
     bar.innerHTML = "16%";
 
     points += 1;
+    
+    if (points === 6) {
+        window.alert("Congratz! You did it!")
+    }
 });
 
 rulesForm.addEventListener("submit", function (event) {
@@ -45,6 +49,10 @@ rulesForm.addEventListener("submit", function (event) {
     bar.innerHTML = "33%";
 
     points += 1;
+    
+    if (points === 6) {
+        window.alert("Congratz! You did it!")
+    }
 });
 
 userForm.addEventListener("submit", function (event) {
@@ -67,6 +75,10 @@ userForm.addEventListener("submit", function (event) {
             bar.innerHTML = "50%";
 
             points += 1;
+            
+            if (points === 6) {
+                window.alert("Congratz! You did it!")
+            }
         }
 });
 
@@ -88,6 +100,10 @@ adminForm.addEventListener("submit", function (event) {
         bar.innerHTML = "67%";
 
         points += 1;
+        
+        if (points === 6) {
+            window.alert("Congratz! You did it!")
+        }
     }
 });
 
@@ -111,6 +127,10 @@ rootForm.addEventListener("submit", function (event) {
         bar.innerHTML = "84%";
 
         points += 1;
+        
+        if (points === 6) {
+            window.alert("Congratz! You did it!")
+        }
     }
 });
 
